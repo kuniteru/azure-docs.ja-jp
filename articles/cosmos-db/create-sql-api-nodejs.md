@@ -80,7 +80,7 @@ Azure Cosmos DB は、Microsoft のグローバルに配布されるマルチモ
 
 この手順は省略可能です。 コード内のデータベース リソースの作成方法に関心がある場合は、次のスニペットを確認できます。 関心がない場合は、「[接続文字列の更新](#update-your-connection-string)」に進んでください。 
 
-以前のバージョンの JavaScript SDK に慣れている方は、"コレクション" や "ドキュメント" といった用語をよく目にしたかと思います。 Azure Cosmos DB は[複数の API モデル](https://docs.microsoft.com/azure/cosmos-db/introduction)をサポートしているため、バージョン 2.0 以上の JavaScript SDK では、コレクション、グラフ、テーブルを表す用語として "コンテナー" が、またコンテナーの内容を表す用語として "項目" が一般的に使用されます。
+以前のバージョンの JavaScript SDK に慣れている方は、"collection や "document" といった用語をよく目にしたかと思います。 Azure Cosmos DB は[複数の API モデル](https://docs.microsoft.com/azure/cosmos-db/introduction)をサポートしているため、バージョン 2.0 以上の JavaScript SDK では、コレクション、グラフ、テーブルを表す用語として "container" が、またコンテナーの内容を表す用語として "item" が一般的に使用されます。
 
 次のスニペットはすべて **app.js** ファイルからのものです。
 
@@ -102,7 +102,7 @@ Azure Cosmos DB は、Microsoft のグローバルに配布されるマルチモ
     const { container } = await client.database(databaseId).containers.createIfNotExists({ id: containerId });
     ```
 
-* 項目 (ドキュメント) が作成されます。
+* アイテム   (ドキュメント) が作成されます。
 
     ```javascript
     const { item } = await client.database(databaseId).container(containerId).items.create(itemBody);
